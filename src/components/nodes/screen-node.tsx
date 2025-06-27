@@ -81,7 +81,7 @@ export function ScreenNode({ id, data, selected }: NodeProps<FlowNode>) {
           'bg-gradient-to-br',
           colors.background
         )}>
-          {typeof data.icon === 'function' ? React.createElement(data.icon, { size: 20 }) : 
+          {typeof data.icon === 'function' ? React.createElement(data.icon, { width: 20, height: 20 }) : 
            typeof data.icon === 'string' ? data.icon : '?'}
         </div>
         

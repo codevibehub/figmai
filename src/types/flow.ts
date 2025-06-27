@@ -37,7 +37,7 @@ export interface ComponentData extends Record<string, unknown> {
   label: string;
   name?: string; // Custom user-defined name
   description?: string;
-  icon?: string | React.ComponentType<any>;
+  icon?: string | React.ComponentType<React.SVGProps<SVGSVGElement>>;
   color?: string;
   properties: Record<string, unknown>;
   category: ComponentType;
@@ -48,7 +48,7 @@ export interface ComponentData extends Record<string, unknown> {
 export interface ScreenData extends Record<string, unknown> {
   label: string;
   description?: string;
-  icon?: string | React.ComponentType<any>;
+  icon?: string | React.ComponentType<React.SVGProps<SVGSVGElement>>;
   color?: string;
   category: ScreenType;
   components: ComponentData[]; // Components inside this screen

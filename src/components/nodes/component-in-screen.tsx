@@ -144,7 +144,7 @@ export function ComponentInScreen({
         'bg-gradient-to-br',
         colors.background
       )}>
-        {typeof component.icon === 'function' ? React.createElement(component.icon, { size: 12 }) : 
+        {typeof component.icon === 'function' ? React.createElement(component.icon, { width: 12, height: 12 }) : 
          typeof component.icon === 'string' ? component.icon : '?'}
       </div>
       

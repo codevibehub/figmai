@@ -202,7 +202,7 @@ Please provide:
         <div className="mb-6 p-3 rounded-lg border bg-card">
           <div className="flex items-center gap-3 mb-3">
             <div className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-sm bg-gradient-to-br ${colors.background}`}>
-              {typeof selectedNode.data.icon === 'function' ? React.createElement(selectedNode.data.icon, { size: 16 }) : 
+              {typeof selectedNode.data.icon === 'function' ? React.createElement(selectedNode.data.icon, { width: 16, height: 16 }) : 
                typeof selectedNode.data.icon === 'string' ? selectedNode.data.icon : '?'}
             </div>
             <div className="flex-1">

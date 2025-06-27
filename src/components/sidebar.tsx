@@ -37,7 +37,7 @@ const screenTemplates: Array<{
   type: ScreenType;
   label: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   category: string;
 }> = [
   {
@@ -88,7 +88,7 @@ const componentTemplates: Array<{
   type: ComponentType;
   label: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   category: string;
 }> = [
   // UI Components
@@ -321,7 +321,7 @@ export function Sidebar() {
                               'bg-gradient-to-br',
                               colors.background
                             )}>
-                                {typeof template.icon === 'function' ? React.createElement(template.icon, { size: 12 }) : 
+                                {typeof template.icon === 'function' ? React.createElement(template.icon, { width: 12, height: 12 }) : 
                                typeof template.icon === 'string' ? template.icon : '?'}
                             </div>
                             <div className="flex-1 min-w-0">
@@ -383,7 +383,7 @@ export function Sidebar() {
                       'bg-gradient-to-br',
                       colors.background
                     )}>
-                      {typeof node.data.icon === 'function' ? React.createElement(node.data.icon, { size: 10 }) : 
+                      {typeof node.data.icon === 'function' ? React.createElement(node.data.icon, { width: 10, height: 10 }) : 
                        typeof node.data.icon === 'string' ? node.data.icon : '?'}
                     </div>
                     
