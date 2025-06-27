@@ -1,13 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Performance optimizations
-  experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-tooltip'],
-  },
-  
   // Images optimization
   images: {
-    unoptimized: false, // Enable optimization for better performance
+    unoptimized: false,
     domains: [
       "source.unsplash.com",
       "images.unsplash.com",
@@ -42,33 +37,6 @@ const nextConfig = {
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  },
-  
-  // Output configuration for static export (if needed)
-  // output: 'export',
-  // trailingSlash: true,
-  
-  // Headers for better caching and security
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
   },
 };
 
