@@ -169,8 +169,12 @@ export function FlowCanvas({ className }: FlowCanvasProps) {
         </Panel>
 
         {nodes.length === 0 && (
-          <Panel position="top-center" className="pointer-events-none" style={{ top: '50%', transform: 'translateY(-50%)' }}>
-            <div className="text-center p-8 bg-background/80 backdrop-blur-sm rounded-lg border border-dashed">
+          <Panel position="top-center" className="pointer-events-none" style={{ 
+            top: '50%', 
+            left: '50%', 
+            transform: 'translate(-50%, -50%)' 
+          }}>
+            <div className="text-center p-8 bg-background/80 backdrop-blur-sm rounded-lg border border-dashed max-w-md">
               <h3 className="text-xl font-semibold mb-2">Welcome to AI Flow Builder</h3>
               <p className="text-muted-foreground">
                 Drag screens from the sidebar to start building your application flow
